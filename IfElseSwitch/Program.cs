@@ -8,6 +8,7 @@ namespace IfElseSwitch
 {
     internal class Program
     {
+        #region Menu de ejercicios y opciones
         static void Main(string[] args)
         {
             Console.WriteLine("--- Menú de Ejercicios Condicionales ---\n");
@@ -36,23 +37,22 @@ namespace IfElseSwitch
             Console.Write("\nSeleccione una opción (1-20): ");
             int opcion = int.Parse(Console.ReadLine());
 
-            Console.Clear();
 
             switch (opcion)
             {
-                case 1: NumeroPositivoNegativoCero(); break;
-                case 2: NumeroParOImpar(); break;
-                case 3: MayorDeEdad(); break;
-                case 4: MultiploDe5(); break;
+                case 1: Num_Pos_Neg(); break;
+                case 2: Num_Par_Impar(); break;
+                case 3: Mayor_Edad(); break;
+                case 4: Multiplo5(); break;
                 case 5: DescuentoPorEdad(); break;
-                case 6: CalificacionAprobatoria(); break;
+                case 6: Aprobado(); break;
                 case 7: DiaDeLaSemana(); break;
                 case 8: NumeroMayorEntreDos(); break;
                 case 9: MayorEntreTresNumeros(); break;
                 case 10: ClasificacionDeAngulos(); break;
                 case 11: CalculoDeImpuestos(); break;
                 case 12: ClasificacionDeNumeros(); break;
-                case 13: VerificacionAnoBisiesto(); break;
+                case 13: Verificacion_Bisiesto(); break;
                 case 14: ConversionDeCalificaciones(); break;
                 case 15: ComparacionTresLongitudes(); break;
                 case 16: CalculadoraDeDescuentos(); break;
@@ -61,92 +61,99 @@ namespace IfElseSwitch
                 case 19: ConversionHorasATurnos(); break;
                 case 20: ClasificacionDeIMC(); break;
                 default:
-                    Console.WriteLine("⚠️ Opción no válida.");
+                    Console.WriteLine("Opción no válida...");
                     break;
             }
         }
+        #endregion
 
-        // 1. Número positivo, negativo o cero
-        static void NumeroPositivoNegativoCero()
+        #region 1. Número positivo, negativo o cero
+        static void Num_Pos_Neg()
         {
             Console.WriteLine("--- Número positivo, negativo o cero ---");
             Console.Write("Ingrese un número: ");
             double num = double.Parse(Console.ReadLine());
 
             if (num > 0)
-                Console.WriteLine("✅ El número es positivo.");
+                Console.WriteLine("El número es positivo.");
             else if (num < 0)
-                Console.WriteLine("⚠️ El número es negativo.");
+                Console.WriteLine("El número es negativo.");
             else
-                Console.WriteLine("🔵 El número es cero.");
+                Console.WriteLine("El número es cero.");
         }
+        #endregion
 
-        // 2. Número par o impar
-        static void NumeroParOImpar()
+        #region 2. Número par o impar
+        static void Num_Par_Impar()
         {
             Console.WriteLine("--- Número par o impar ---");
             Console.Write("Ingrese un número entero: ");
             int num = int.Parse(Console.ReadLine());
 
             if (num % 2 == 0)
-                Console.WriteLine("✅ El número es par.");
+                Console.WriteLine("El número es par.");
             else
-                Console.WriteLine("⚠️ El número es impar.");
+                Console.WriteLine("El número es impar.");
         }
+        #endregion
 
-        // 3. Mayor de edad
-        static void MayorDeEdad()
+        #region 3. Mayor de edad
+        static void Mayor_Edad()
         {
             Console.WriteLine("--- Mayor o menor de edad ---");
             Console.Write("Ingrese su edad: ");
             int edad = int.Parse(Console.ReadLine());
 
             if (edad >= 18)
-                Console.WriteLine("✅ Eres mayor de edad.");
+                Console.WriteLine("Eres mayor de edad.");
             else
-                Console.WriteLine("⚠️ Eres menor de edad.");
+                Console.WriteLine("Eres menor de edad.");
         }
+        #endregion
 
-        // 4. Múltiplo de 5
-        static void MultiploDe5()
+        #region 4. Múltiplo de 5
+        static void Multiplo5()
         {
             Console.WriteLine("--- Múltiplo de 5 ---");
             Console.Write("Ingrese un número: ");
             int num = int.Parse(Console.ReadLine());
 
             if (num % 5 == 0)
-                Console.WriteLine("✅ El número es múltiplo de 5.");
+                Console.WriteLine("El número es múltiplo de 5.");
             else
-                Console.WriteLine("⚠️ El número NO es múltiplo de 5.");
+                Console.WriteLine("El número NO es múltiplo de 5.");
         }
+        #endregion region
 
-        // 5. Descuento por edad
+        #region 5. Descuento por edad
         static void DescuentoPorEdad()
         {
             Console.WriteLine("--- Descuento por edad ---");
             Console.Write("Ingrese su edad: ");
             int edad = int.Parse(Console.ReadLine());
 
-            if (edad > 60)
-                Console.WriteLine("✅ Aplica para descuento del 50%.");
+            if (edad > 60) // cambiar por edad>59
+                Console.WriteLine("Aplica para descuento del 50%.");
             else
-                Console.WriteLine("⚠️ No aplica para descuento.");
+                Console.WriteLine("No aplica para descuento.");
         }
+        #endregion
 
-        // 6. Calificación aprobatoria
-        static void CalificacionAprobatoria()
+        #region 6. Calificación aprobatoria
+        static void Aprobado()
         {
             Console.WriteLine("--- Calificación aprobatoria ---");
             Console.Write("Ingrese la calificación (0-100): ");
             int cal = int.Parse(Console.ReadLine());
 
             if (cal >= 60)
-                Console.WriteLine("✅ Aprobado.");
+                Console.WriteLine("Aprobado.");
             else
-                Console.WriteLine("⚠️ Reprobado.");
+                Console.WriteLine("Reprobado.");
         }
+        #endregion
 
-        // 7. Día de la semana
+        #region 7. Día de la semana
         static void DiaDeLaSemana()
         {
             Console.WriteLine("--- Día de la semana ---");
@@ -162,11 +169,12 @@ namespace IfElseSwitch
                 case 5: Console.WriteLine("Viernes"); break;
                 case 6: Console.WriteLine("Sábado"); break;
                 case 7: Console.WriteLine("Domingo"); break;
-                default: Console.WriteLine("⚠️ Número inválido."); break;
+                default: Console.WriteLine(" Número inválido."); break;
             }
         }
+        #endregion
 
-        // 8. Número mayor entre dos
+        #region 8. Número mayor entre dos
         static void NumeroMayorEntreDos()
         {
             Console.WriteLine("--- Número mayor entre dos ---");
@@ -176,14 +184,15 @@ namespace IfElseSwitch
             int n2 = int.Parse(Console.ReadLine());
 
             if (n1 > n2)
-                Console.WriteLine($"✅ El mayor es: {n1}");
+                Console.WriteLine($"El mayor es: {n1}");
             else if (n2 > n1)
-                Console.WriteLine($"✅ El mayor es: {n2}");
+                Console.WriteLine($"El mayor es: {n2}");
             else
-                Console.WriteLine("🔵 Ambos números son iguales.");
+                Console.WriteLine("Ambos números son iguales.");
         }
+        #endregion
 
-        // 9. Mayor entre tres números
+        #region 9. Mayor entre tres números
         static void MayorEntreTresNumeros()
         {
             Console.WriteLine("--- Mayor entre tres números ---");
@@ -198,10 +207,11 @@ namespace IfElseSwitch
             if (n2 > mayor) mayor = n2;
             if (n3 > mayor) mayor = n3;
 
-            Console.WriteLine($"✅ El mayor es: {mayor}");
+            Console.WriteLine("El mayor es: {mayor}");
         }
+        #endregion
 
-        // 10. Clasificación de ángulos
+        #region 10. Clasificación de ángulos
         static void ClasificacionDeAngulos()
         {
             Console.WriteLine("--- Clasificación de ángulos ---");
@@ -219,8 +229,10 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Valor inválido");
         }
+        #endregion
 
-        // 11. Cálculo de impuestos
+        #region 11. Cálculo de impuestos
+
         static void CalculoDeImpuestos()
         {
             Console.WriteLine("--- Cálculo de impuestos ---");
@@ -238,16 +250,17 @@ namespace IfElseSwitch
 
             Console.WriteLine($"Impuesto a pagar: {impuesto:C2}");
         }
+        #endregion
 
-        // 12. Clasificación de números
+        #region 12. Clasificación de números
         static void ClasificacionDeNumeros()
         {
             Console.WriteLine("--- Clasificación de números ---");
             Console.Write("Ingrese el primer número: ");
             int n1 = int.Parse(Console.ReadLine());
-            Console.Write("Ingrese el segundo número: ");
+            Console.Write("Ingrese el segundo número: "); // solo esta pidiendo 1 numero
             int n2 = int.Parse(Console.ReadLine());
-            Console.Write("Ingrese el tercer número: ");
+            Console.Write("Ingrese el tercer número: "); // no parece que esta corriendo este, usa un formato viejo.
             int n3 = int.Parse(Console.ReadLine());
 
             bool todosPositivos = n1 > 0 && n2 > 0 && n3 > 0;
@@ -263,9 +276,10 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Números mixtos.");
         }
+        #endregion
 
-        // 13. Verificación de año bisiesto
-        static void VerificacionAnoBisiesto()
+        #region 13. Verificación de año bisiesto
+        static void Verificacion_Bisiesto()
         {
             Console.WriteLine("--- Verificación de año bisiesto ---");
             Console.Write("Ingrese un año: ");
@@ -274,12 +288,13 @@ namespace IfElseSwitch
             bool esBisiesto = (año % 4 == 0 && año % 100 != 0) || (año % 400 == 0);
 
             if (esBisiesto)
-                Console.WriteLine("✅ El año es bisiesto.");
+                Console.WriteLine("El año es bisiesto.");
             else
-                Console.WriteLine("⚠️ El año NO es bisiesto.");
+                Console.WriteLine("El año NO es bisiesto.");
         }
+        #endregion
 
-        // 14. Conversión de calificaciones
+        #region 14. Conversión de calificaciones
         static void ConversionDeCalificaciones()
         {
             Console.WriteLine("--- Conversión de calificaciones ---");
@@ -301,8 +316,9 @@ namespace IfElseSwitch
 
             Console.WriteLine($"Calificación letra: {letra}");
         }
+        #endregion
 
-        // 15. Comparación de tres longitudes
+        #region 15. Comparación de tres longitudes
         static void ComparacionTresLongitudes()
         {
             Console.WriteLine("--- Comparación de tres longitudes ---");
@@ -314,12 +330,13 @@ namespace IfElseSwitch
             double l3 = double.Parse(Console.ReadLine());
 
             if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1)
-                Console.WriteLine("✅ Pueden formar un triángulo.");
+                Console.WriteLine("Pueden formar un triángulo.");
             else
-                Console.WriteLine("⚠️ No pueden formar un triángulo.");
+                Console.WriteLine("No pueden formar  triángulo.");
         }
+        #endregion
 
-        // 16. Calculadora de descuentos
+        #region 16. Calculadora de descuentos
         static void CalculadoraDeDescuentos()
         {
             Console.WriteLine("--- Calculadora de descuentos ---");
@@ -336,8 +353,9 @@ namespace IfElseSwitch
             double precioFinal = precio - (precio * descuento);
             Console.WriteLine($"Precio final con descuento: {precioFinal:C2}");
         }
+        #endregion
 
-        // 17. Tipo de triángulo
+        #region 17. Tipo de triángulo
         static void TipoDeTriangulo()
         {
             Console.WriteLine("--- Tipo de triángulo ---");
@@ -350,7 +368,7 @@ namespace IfElseSwitch
 
             if (!(l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1))
             {
-                Console.WriteLine("⚠️ No forman un triángulo válido.");
+                Console.WriteLine("No forman un triángulo válido.");
                 return;
             }
 
@@ -361,8 +379,9 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Triángulo escaleno.");
         }
+        #endregion
 
-        // 18. Evaluación de temperatura
+        #region 18. Evaluación de temperatura
         static void EvaluacionDeTemperatura()
         {
             Console.WriteLine("--- Evaluación de temperatura ---");
@@ -378,8 +397,9 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Hace mucho calor.");
         }
+        #endregion
 
-        // 19. Conversión de horas a turnos
+        #region 19. Conversión de horas a turnos
         static void ConversionHorasATurnos()
         {
             Console.WriteLine("--- Conversión de horas a turnos ---");
@@ -397,8 +417,9 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Hora inválida.");
         }
+        #endregion
 
-        // 20. Clasificación de IMC
+        #region 20. Clasificación de IMC
         static void ClasificacionDeIMC()
         {
             Console.WriteLine("--- Clasificación de IMC ---");
@@ -420,6 +441,7 @@ namespace IfElseSwitch
             else
                 Console.WriteLine("Obesidad");
         }
+        #endregion
     }
 }
 
